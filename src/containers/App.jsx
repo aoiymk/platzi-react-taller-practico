@@ -5,46 +5,47 @@ import Categories from '../components/Categories';
 import Carousel from '../components/Carousel';
 import CarouselItem from '../components/CarouselItem';
 import Footer from '../components/Footer';
+import useInitialState from '../hooks/useInitialState';
 
 import '../assets/styles/App.scss'
 
+const API = 'http://localhost:3000/initalState';
 
 const App = () => {
 
-    const [ videos, setVideos  ] = useState([]);
-
-    useEffect( () => {
-        fetch('http://localhost:3000/initalState')
-            .then(response => response.json())
-            .then(data => setVideos(data));
-    }, [] );
-    console.log(videos);
-
+    const initialState = useInitialState(API);
     return(
         <div className="App">
         <Header/>
         <Search/>
 
-        <Categories title="Mi lista">
-        <Carousel>
-        <CarouselItem title="Titulo 1" subtitle="Subtitle 1"/>
-        <CarouselItem title="Titulo 2" subtitle="Subtitle 2"/>
-        <CarouselItem title="Titulo 3" subtitle="Subtitle 3"/>
-        </Carousel>
-        </Categories>
-
+        {initialState.mylist.length > 0 &&
+            <Categories title="Mi lista">
+            <Carousel>
+           {initialState.mylist.map(item =>
+                <CarouselItem key={item.id} {...item} />
+           )
+           };
+            </Carousel>
+            </Categories>
+        };
         
         <Categories title="Tendencias">
         <Carousel>
-        <CarouselItem title="Titulo 1" subtitle="Subtitle 1"/>
-        <CarouselItem title="Titulo 2" subtitle="Subtitle 2"/>
+        {initialState.trends.map(item =>
+                <CarouselItem key={item.id} {...item} />
+           )
+           };
         </Carousel>
         </Categories>
 
 
         <Categories title="Originales de Platzi Video">
         <Carousel>
-        <CarouselItem title="Titulo 1" subtitle="Subtitle 1"/>
+            {initialState.originals.map(item =>
+                <CarouselItem key={item.id} {...item} />
+           )
+           };
         </Carousel>
         </Categories>
 

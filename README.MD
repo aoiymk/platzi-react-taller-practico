@@ -124,3 +124,10 @@ Sirve para simular una Api desde un archivo json.
 3. Ejecución en terminal
 
         json-server archivoParaTuAPI.json
+
+## PropTypes
+Los PropTypes son una propiedad de nuestros componentes que nos permiten especificar qué tipo de elementos son nuestras props: arrays, strings, números, etc.
+
+1. Instalación
+
+        npm install --save prop-types
