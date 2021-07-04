@@ -109,3 +109,18 @@ El objetivo del ejercicio es tomar esta [página base](https://github.com/platzi
 
 ## Gitignore
 1. Agregar archivo .gitignore con componentes necesarios a ignorar
+
+# Elemetos útiles
+
+## Fake Api
+Sirve para simular una Api desde un archivo json.
+
+1. Instalación json-server
+
+        sudo npm install json-server -g
+
+2. Agregar archivo json necesario para levantar la fake API
+
+3. Ejecución en terminal
+
+        json-server archivoParaTuAPI.json
