@@ -2,6 +2,8 @@
 
 Ejercicio realizado durante el curso [Clases del Curso Práctico de React JS](https://platzi.com/clases/react-ejs/) disponible en plataforma Platzi
 
+El objetivo del ejercicio es tomar esta [página base](https://github.com/platzi/curso-frontend-escuelajs) y aplicar arquitectura de componentes para construirla usando React.
+
 # Tips para crear proyecto desde cero
 
 ## Estructura Base
