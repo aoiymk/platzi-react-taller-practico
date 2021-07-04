@@ -22,6 +22,21 @@ const App = () => (
     </Carousel>
     </Categories>
 
+    
+    <Categories>
+    <Carousel>
+    <CarouselItem/>
+    <CarouselItem/>
+    </Carousel>
+    </Categories>
+
+
+    <Categories>
+    <Carousel>
+    <CarouselItem/>
+    </Carousel>
+    </Categories>
+
     <Footer/>
     </div>
 
