@@ -14,26 +14,26 @@ const App = () => (
     <Header/>
     <Search/>
 
-    <Categories>
+    <Categories title="Mi lista">
     <Carousel>
-    <CarouselItem/>
-    <CarouselItem/>
-    <CarouselItem/>
+    <CarouselItem title="Titulo 1" subtitle="Subtitle 1"/>
+    <CarouselItem title="Titulo 2" subtitle="Subtitle 2"/>
+    <CarouselItem title="Titulo 3" subtitle="Subtitle 3"/>
     </Carousel>
     </Categories>
 
     
-    <Categories>
+    <Categories title="Tendencias">
     <Carousel>
-    <CarouselItem/>
-    <CarouselItem/>
+    <CarouselItem title="Titulo 1" subtitle="Subtitle 1"/>
+    <CarouselItem title="Titulo 2" subtitle="Subtitle 2"/>
     </Carousel>
     </Categories>
 
 
-    <Categories>
+    <Categories title="Originales de Platzi Video">
     <Carousel>
-    <CarouselItem/>
+    <CarouselItem title="Titulo 1" subtitle="Subtitle 1"/>
     </Carousel>
     </Categories>
 
